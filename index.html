@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alyssa Fu Ward</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --orange: #F97316;
+    --orange-light: #FED7AA;
+    --orange-pale: #FFF7ED;
+    --deep: #1C0A00;
+    --warm-dark: #3B1B08;
+    --text: #3B1B08;
+    --muted: #92400E;
+    --white: #FFFAF5;
+    --pale-sky: #F2F8FD;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--pale-sky);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  header .name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--deep);
+  }
+
+  header a.site-link {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .part-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .part-label::after { content: ''; width: 32px; height: 1px; background: var(--orange); opacity: 0.4; }
+
+  .episode { position: relative; margin-bottom: 12px; animation: fadeUp 0.6s ease both; }
+
+  .episode-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--white);
+    border: 1px solid rgba(249,115,22,0.15);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .episode-card:hover {
+    border-color: rgba(249,115,22,0.45);
+    background: var(--orange-pale);
+    transform: translateX(4px);
+    box-shadow: -4px 0 0 var(--orange), 0 4px 20px rgba(249,115,22,0.08);
+  }
+
+  .ep-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--orange-light);
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  .episode-card:hover .ep-icon { background: var(--orange); color: white; }
+
+  .ep-content { flex: 1; min-width: 0; }
+
+  .ep-title { font-size: 17px; font-weight: 500; line-height: 1.45; color: var(--text); }
+  .ep-note { color: var(--muted); font-weight: 300; font-size: 13px; margin-top: 2px; }
+
+  .ep-arrow {
+    flex-shrink: 0;
+    color: var(--orange-light);
+    font-size: 16px;
+    transition: all 0.25s ease;
+  }
+
+  .episode-card:hover .ep-arrow { color: var(--orange); transform: translateX(3px); }
+
+  .part-spacer {
+    margin: 32px 0 24px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--orange-light) 0%, transparent 100%);
+    opacity: 0.5;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(249,115,22,0.15);
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    animation: fadeUp 0.7s ease both;
+  }
+
+  footer a { color: var(--orange); text-decoration: none; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <span class="name">Alyssa Fu Ward</span>
+    <a class="site-link" href="https://alyssafuward.substack.com">Substack →</a>
+  </header>
+
+  <div class="part-label">Games</div>
+
+  <div class="episode">
+    <a class="episode-card" href="/pop-detective/">
+      <div class="ep-icon">🔍</div>
+      <div class="ep-content"><div class="ep-title">Pop Detective</div></div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="episode">
+    <a class="episode-card" href="/kayvas-typing-game/">
+      <div class="ep-icon">⌨️</div>
+      <div class="ep-content"><div class="ep-title">Kayva's Typing Game</div></div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="episode">
+    <a class="episode-card" href="https://kaylees-2048.lovable.app/">
+      <div class="ep-icon">🔢</div>
+      <div class="ep-content"><div class="ep-title">Kaylee's 2048</div></div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="episode">
+    <a class="episode-card" href="https://rubiks-times.web.app/">
+      <div class="ep-icon">🧩</div>
+      <div class="ep-content">
+        <div class="ep-title">Rubik's Times</div>
+        <div class="ep-note">Created by Keith Ward</div>
+      </div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="part-spacer"></div>
+
+  <div class="part-label">Apps</div>
+
+  <div class="episode">
+    <a class="episode-card" href="/ai-chat-explorer/">
+      <div class="ep-icon">💬</div>
+      <div class="ep-content">
+        <div class="ep-title">AI Chat Explorer</div>
+        <div class="ep-note">Explore your ChatGPT conversation history, all in your browser</div>
+      </div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="episode">
+    <a class="episode-card" href="/chatgpt-me/">
+      <div class="ep-icon">🪞</div>
+      <div class="ep-content">
+        <div class="ep-title">ChatGPT Me</div>
+        <div class="ep-note">Turn your ChatGPT export into a Claude-ready working profile</div>
+      </div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="episode">
+    <a class="episode-card" href="/constellation-graph/">
+      <div class="ep-icon">✨</div>
+      <div class="ep-content">
+        <div class="ep-title">Constellation Graph</div>
+        <div class="ep-note">Interactive visualization of survey responses</div>
+      </div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="episode">
+    <a class="episode-card" href="https://hcaic-assessment.lovable.app/">
+      <div class="ep-icon">📋</div>
+      <div class="ep-content"><div class="ep-title">HCAIC Assessment</div></div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="part-spacer"></div>
+
+  <div class="part-label">Stories</div>
+
+  <div class="episode">
+    <a class="episode-card" href="/alyssafuward-substack/">
+      <div class="ep-icon">🍊</div>
+      <div class="ep-content"><div class="ep-title">Alyssa's Substack Stories</div></div>
+      <div class="ep-arrow">→</div>
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Alyssa Fu Ward &middot; <a href="https://alyssafuward.substack.com">Substack</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
